@@ -1,0 +1,33 @@
+.product-list-container{
+    margin-top: 50px;
+    .product-list{
+        font-size: 15px;
+
+        .product-list-image{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .product-list-detail{
+            p{
+                margin: 0;
+            }
+            small{
+                color: rgba(125, 125, 125, 0.49);
+            }
+        }
+        .cart {
+            width: 30px;
+            display: block;
+            margin-left: auto;
+        }
+        .star{
+            img{
+                width: 10px;
+                margin-right: 2px;
+            }
+        }
+    }
+}
+

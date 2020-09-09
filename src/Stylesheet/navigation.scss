@@ -1,0 +1,36 @@
+.navbar {
+  .nav-link{
+    font-size: 15px;
+    color: #505050;
+    font-weight: bold;
+  }
+  .navbar-brand{
+    img{
+      width: 40px;
+    }
+  }
+  .search-icon, .cart-icon{
+    display: inline-block;
+    margin-right: 25px;
+  }
+  .search-icon{
+    width: 15px;
+    margin-top: 10px;
+  }
+  .search-input{
+    border-top: unset;
+    border-left: unset;
+    border-right: unset;
+    border-bottom: 2px solid #eca80e;
+    display: inline-block;
+    margin-right: 30px;
+    margin-left: -20px;
+    outline: unset;
+    width: 150px;
+  }
+  .cart-icon{
+    width: 18px;
+    display: inline-block;
+    margin-top: 0px;
+  }
+}
