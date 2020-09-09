@@ -1,21 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Navigation from "./Component/Navigation"
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+    Router, withRouter,
+    Switch,
+    Route,
+} from "react-router";
+import Navigation from "./Component/Navigation"
 import Home from "./Component/Home";
 import Product from "./Component/Product";
+import './App.css';
+import { createBrowserHistory } from "history";
+const customHistory = createBrowserHistory();
 function App() {
   return (
     <div className="App">
-      <Navigation/>
-      <Home/>
-      <Product/>
+      <Router history={customHistory}>
+          <Navigation/>
+          <Switch>
+              <Route path="/product/:id" component={Product}/>
+              <Route path="/search/:text" component={Home}/>
+              <Route path="/" component={Home}/>
+          </Switch>
+      </Router>
     </div>
   );
 }

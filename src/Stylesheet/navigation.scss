@@ -1,4 +1,7 @@
 .navbar {
+  @media (max-width: 550px) {
+    padding: 10px 0px!important;
+  }
   .nav-link{
     font-size: 15px;
     color: #505050;
@@ -15,8 +18,30 @@
   }
   .search-icon{
     width: 15px;
-    margin-top: 10px;
+    margin-top: 14px;
+    @media (max-width: 770px) {
+      margin-top: 4px;
+    }
   }
+  .navbar-collapse.show, .navbar-collapse.collapsing{
+    @media (max-width: 770px) {
+      position: absolute;
+      top: 60px;
+      display: block;
+      width: 100%;
+      background-color: #fff;
+      z-index: 30;
+      left: 0px;
+      padding: 0 20px;
+    }
+  }
+  //.navbar-collapse.collapsing{
+  //  @media (max-width: 770px) {
+  //    position: absolute;
+  //    left: 20px;
+  //    top: 60px;
+  //  }
+  //}
   .search-input{
     border-top: unset;
     border-left: unset;
@@ -27,10 +52,27 @@
     margin-left: -20px;
     outline: unset;
     width: 150px;
+    @media (max-width: 550px) {
+      position: absolute;
+      width: 90%;
+      left: 0;
+      top: 60px;
+      right: 0;
+      margin: auto;
+    }
   }
   .cart-icon{
     width: 18px;
     display: inline-block;
     margin-top: 0px;
   }
+  .right-nav{
+    @media (max-width: 770px) {
+      display: unset!important;
+      .nav-item, .nav-link{
+        display: inline-block!important;
+      }
+    }
+  }
+
 }

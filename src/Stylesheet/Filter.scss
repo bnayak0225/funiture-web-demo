@@ -1,9 +1,60 @@
 .filter {
+  .filter-icon{
+    display: none;
+    width: 24px;
+    margin-bottom: 16px;
+    margin-left: auto;
+    @media (max-width: 770px) {
+      display: block;
+    }
+  }
+  .filter-close-button{
+    display: none;
+    @media (max-width: 770px) {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      background-color: #cbcbcb;
+      padding: 10px;
+      width: 100%;
+      left: 0;
+      text-align: center;
+    }
+  }
+  .filter-container{
+    @media (max-width: 770px) {
+      display: none;
+      top: 0px;
+      left: 0;
+      z-index: 10;
+      background-color: #ebeaea;
+      width: 100%;
+      height: 100%;
+      padding: 16px;
+      border-radius: 3px;
+      border: 1px solid #dddddd;
+      overflow: auto;
+    }
+  }
+  .filter-container.show{
+    display: block;
+    position: fixed;
+    @media (min-width: 771px) {
+      position: unset;
+    }
+  }
+
   .title{
     color: rgba(125, 125, 125, 0.49);
   }
   .menu {
     border-bottom: 1px solid #cbcbcb;
     padding: 10px 0;
+    @media (max-width: 550px) {
+      padding: 6px 0;
+    }
+  }
+  :last-child{
+    border-bottom: unset;
   }
 }

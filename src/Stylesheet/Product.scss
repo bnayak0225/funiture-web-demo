@@ -1,10 +1,17 @@
 $small-text-color: rgba(125, 125, 125, 0.49);;
 .product{
   font-size: 15px;
+  margin-top: 50px;
+  @media (max-width: 550px) {
+    margin-top: 20px;
+  }
   img{
     width: 100%;
     height: 400px;
     object-fit: cover;
+    @media (max-width: 550px) {
+      height: 200px;
+    }
   }
   small{
     color: $small-text-color;
@@ -14,5 +21,11 @@ $small-text-color: rgba(125, 125, 125, 0.49);;
     color: #ffffff;
     border: unset;
     height: 35px;
+  }
+  .cart-icon{
+    height: 26px;
+    width: 31px;
+    display: inline-block;
+    margin-top: 5px;
   }
 }
